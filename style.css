@@ -154,18 +154,19 @@ h1, p {
     clear: both; /* evita que queden al lado de algo flotante */
 }
 
-/* Carrusel como banner debajo */
+/* ================================
+   Carrusel como banner
+================================ */
 .carrusel {
-    display: block;      /* Bloque completo */
-    width: 80%;
+    position: relative;
+    width: 80%;           /* Ajusta al ancho de tu diseño */
+    max-width: 700px;     /* Tamaño máximo */
     height: 300px;
-    position: center;
+    margin: 20px auto 0;  /* Centrado con margen superior */
     overflow: hidden;
-    margin-top: 20px;    /* Separación del título */
-    clear: both;         /* Asegura que no quede al lado de otros elementos */
 }
 
-/* Slides dentro del carrusel */
+/* Slides */
 .carrusel .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -183,73 +184,55 @@ h1, p {
     display: block;
 }
 
-/* Botones */
-.carrusel button {
+/* Botones (Flechas) */
+.carrusel button.prev,
+.carrusel button.next {
     position: absolute;
-    top: 50%;
+    top: 50%;                /* Centra verticalmente */
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    font-size: 2em;
-    padding: 5px 12px;
+    padding: 10px 14px;
     cursor: pointer;
+    font-size: 24px;
     border-radius: 50%;
     z-index: 10;
 }
 
-.carrusel .prev { left: 10px; }
-.carrusel .next { right: 10px; }
+/* Flechas a los costados */
+.carrusel button.prev {
+    left: -50px;     /* MUEVE hacia afuera del carrusel */
+}
+
+.carrusel button.next {
+    right: -50px;    /* MUEVE hacia afuera del carrusel */
+}
 
 .carrusel button:hover {
     background-color: rgba(0,0,0,0.7);
 }
 
-/* Responsive */
+/* ================================
+   Responsive
+================================ */
 @media (max-width: 768px) {
     .carrusel {
-        height: 200px;
+        width: 95%;
+        height: 220px;
     }
+
+    .carrusel button.prev {
+        left: -30px;   /* Más cerca en mobile */
+    }
+    .carrusel button.next {
+        right: -30px;
+    }
+
     .carrusel button {
-        font-size: 1.5em;
-        padding: 4px 10px;
+        font-size: 20px;
+        padding: 8px 12px;
     }
-} .carrusel {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-}
-
-.carrusel img {
-    width: 100%;
-    display: none;
-}
-
-.carrusel img.activo {
-    display: block;
-}
-
-.carrusel button.prev,
-.carrusel button.next {
-    position: absolute;
-    top: 50%;              /* Centra verticalmente las flechas */
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 50%;
-}
-
-.carrusel button.prev {
-    left: -50px;           /* Mueve la flecha izquierda hacia afuera del carrusel */
-}
-
-.carrusel button.next {
-    right: -50px;          /* Mueve la flecha derecha hacia afuera del carrusel */
 }
 
 .contact {
@@ -365,6 +348,7 @@ nav a {
         padding: 8px 0;
     }
 }
+
 
 
 
