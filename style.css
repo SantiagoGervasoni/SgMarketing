@@ -53,18 +53,24 @@ body{Z|
 .hero p{color:var(--muted);font-size:18px}
 .hero-media img{width:320px;border-radius:12px;border:3px solid var(--accent)}
 
-/* BOTONES F1 (reutilizable) */
-.f1-btn{
-  background-color:var(--accent);
-  color:#000;
-  border:2px solid #410000;
-  padding:10px 18px;
-  border-radius:8px;
-  font-weight:700;
-  cursor:pointer;
-  text-transform:uppercase;
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+.btn-wsp {
+    display: inline-block;
+    text-decoration: none;
+    background: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px auto;
+    display: block;      /* esto permite centrarlo */
+    width: fit-content;  /* el ancho se ajusta al texto */
+    text-align: center;  /* centra el contenido interno */
 }
+#contacto {
+    text-align: center;
+}
+
 .f1-btn:hover{transform:translateY(-3px) scale(1.03); box-shadow:0 6px 20px rgba(255,204,0,0.18)}
 
 /* GHOST BUTTON */
@@ -366,4 +372,5 @@ nav a {
         padding: 5px 0;
     }
 }
+
 
