@@ -298,23 +298,35 @@ section#pagos img#mp {
         width: 150px; /* reduce imagen del logo para celular */
     }
 }
-/* --- AJUSTES PARA CELULARES --- */
-@media (max-width: 600px) {
+/* --- AJUSTES UNIVERSALES PARA TODOS LOS CELULARES --- */
+@media (max-width: 900px) {
 
-    /* Tamaño del menú */
+    /* El menú completo se achica */
     nav.menu {
-        padding: 5px 10px;
+        padding: 5px 8px;
+        flex-direction: column;     /* menú en columna si hace falta */
+        gap: 8px;
     }
 
-    /* Reducir tamaño del logo */
+    /* Logo más chico */
     nav.menu .logo img {
-        width: 120px;   /* Cambiá este número si querés más chico */
+        width: 120px;     /* podes bajar a 100 si querés más chico */
     }
 
-    /* Reducir el texto del menú */
+    /* Texto del menú más chico y con menos espacio */
     nav.menu .menu-links a {
-        font-size: 14px;   /* antes seguramente tenías 18–20px */
-        padding: 5px 8px;  /* reduce el espacio interno */
+        font-size: 14px;      /* tamaño ideal para celular */
+        padding: 5px 8px;     /* menos espacio para que no ocupe media pantalla */
+        margin: 2px 0;
+        display: inline-block;
+    }
+
+    /* Si los links son muchos, que no rompan el diseño */
+    nav.menu .menu-links {
+        display: flex;
+        flex-wrap: wrap;       /* permite que pasen a otra línea sin romper */
+        justify-content: center;
+        gap: 6px;
     }
 }
 
