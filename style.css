@@ -89,12 +89,10 @@ h2{color:var(--accent-2)}
 .footer a{color:var(--accent);text-decoration:none;margin-left:14px}
 
 /* RESPONSIVE */
-@media(max-width:900px){
+
   .hero{flex-direction:column; text-align:center}
   .hero-media img{width:85%}
   .about{grid-template-columns:1fr}
-  .menu .menu-links{display:none}
-}
 
 .servicios-lista {
     display: flex;
@@ -300,5 +298,6 @@ section#pagos img#mp {
         width: 150px; /* reduce imagen del logo para celular */
     }
 }
+
 
 
