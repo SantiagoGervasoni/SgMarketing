@@ -8,6 +8,9 @@ Tú dijiste:
   --card: #5a0000;
   --muted: #ffffff;
 }
+ body, h1, h2, h3, h4, h5, h6, p, a, li, input, textarea, button {
+    color: #ffffff !important;
+}
 no toques nada de la estructura solo ponle colores neutros 
 
 *{box-sizing:border-box}
@@ -349,3 +352,4 @@ nav a {
         padding: 8px 0;
     }
 }
+
