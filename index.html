@@ -6,28 +6,31 @@
     <title>SG Marketing</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+<!-- MENU -->
 <nav class="menu">
     <div class="logo">
         <img src="SGindumentaria (1).png" alt="BIENVENIDOS" width="200">
-
         <span>BIENVENIDOS</span>
     </div>
+
     <div class="menu-links">
-        <a href="#"onclick="mostrarSeccion('inicio')">Inicio</a>
-        <a href="#"onclick="mostrarSeccion('servicios')">Servicios</a>
-        <a href="#"onclick="mostrarSeccion('tipos_de_servicio')">Tipos de servicios</a>
-        <a href="#"onclick="mostrarSeccion('sobre_mi')">Sobre mi</a>
-        <a href="#"onclick="mostrarSeccion('contacto')">Contacto</a>
-        <a href="#"onclick="mostrarSeccion('pagos')">Pagos</a>
+        <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a href="#" onclick="mostrarSeccion('servicios')">Servicios</a>
+        <a href="#" onclick="mostrarSeccion('tipos_de_servicio')">Tipos de servicios</a>
+        <a href="#" onclick="mostrarSeccion('sobre_mi')">Sobre mi</a>
+        <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+        <a href="#" onclick="mostrarSeccion('pagos')">Pagos</a>
     </div>
-     
 </nav>
 
-<header
+<!-- INICIO -->
+<header>
 <section id="inicio" class="hero">
-<h1>SG Marketing</h1>
-<p><B>Impulsamos tu marca mediante herramientas originales con un crecimiento exponencial</B></p>
+    <h1>SG Marketing</h1>
+    <p><b>Impulsamos tu marca mediante herramientas originales con un crecimiento exponencial</b></p>
 
     <div class="carrusel">
         <div class="slides">
@@ -38,89 +41,85 @@
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
     </div>
-    
-        <div class="hero-actions">
-            <button class="f1-btn" onclick="scrollToSection('#servicios')">Servicios</button>
-            <a class="ghost-btn" href="#servicios">Ver tipos de servicios</a>
-        </div>
+
+    <div class="hero-actions">
+        <button class="f1-btn" onclick="scrollToSection('#servicios')">Servicios</button>
+        <a class="ghost-btn" href="#servicios">Ver tipos de servicios</a>
     </div>
-    <div class="hero-media">
-        <img src="assets/portada.jpg" alt="Marketing" />
-    </div>
+
+</section>
 </header>
 
-<section id="servicios" class="container">
+<!-- SERVICIOS -->
+<section id="servicios" class="servicios">
     <h2>Servicios</h2>
-    <div class="cards">
+
+    <div class="contenedor-servicios">
         <div class="card">
+            <img src="serv1.jpg" alt="">
             <h3>Marketing digital</h3>
-            <p>Nosotros podemos crear tu tienda o pagina web para que empiezes a facturar mas!</p>
+            <p>Creación de tu tienda o página web.</p>
         </div>
+
         <div class="card">
+            <img src="serv2.jpg" alt="">
             <h3>Mantenimiento</h3>
-            <p>Agregar productos y chequear que todo siga bien</p>
+            <p>Carga de productos y revisión general.</p>
         </div>
+
         <div class="card">
+            <img src="serv3.jpg" alt="">
             <h3>Branding & Diseño</h3>
-            <p>Logotipos, paleta de colores y piezas gráficas para redes y web.</p>
+            <p>Logotipos, paletas y piezas gráficas.</p>
         </div>
     </div>
 </section>
 
+<!-- TIPOS DE SERVICIOS -->
 <section id="tipos_de_servicio" class="container">
-    
-    <h2 id="servicios">Tipos de servicios</h2>
+    <h2>Tipos de servicios</h2>
 
-<div class="servicios-lista">
+    <div class="servicios-lista">
+        <div class="servicio-box">
+            <h3>Tiendas Nube</h3>
+            <p>Creamos tu tienda online desde cero.</p>
+        </div>
 
-    <div class="servicio-box">
-        <h3>Tiendas Nube</h3>
-        <p>Creamos tu tienda online desde cero usando Tienda Nube, lista para vender, enlazada con medios de pago y con diseño profesional.</p>
+        <div class="servicio-box">
+            <h3>Páginas web personalizadas</h3>
+            <p>Programadas 100% a medida.</p>
+        </div>
     </div>
-
-    <div class="servicio-box">
-        <h3>Páginas web personalizadas</h3>
-        <p>Desarrollo páginas web modernas y rápidas programando todo yo mismo asi que este servicio es 100% perzonalizado para cualquier tipo de negocio, agencia, proyecto social etc.</p>
-    </div>
-
-</div>
-
 </section>
 
+<!-- SOBRE MI -->
 <section id="sobre_mi" class="container about">
     <div>
         <h2>Sobre mí</h2>
-        <p>Soy Santiago, Un joven que quiere empezar a trabajar diseñando este tipo de paginas desde casa</p>
+        <p>Soy Santiago, diseñador web y creador de SG Marketing.</p>
     </div>
+
     <div>
-        <h3>Por qué elegir SG Marketing</h3>
+        <h3>Por qué elegirnos</h3>
         <ul>
-            <li>Tenemos buenos precios y descuentos</li>
+            <li>Buenos precios y descuentos</li>
             <li>Variedad de diseños</li>
             <li>Comunicación directa y clara</li>
         </ul>
     </div>
-</section> 
-<section id="contacto" class="container contact">
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto">
     <h2>Contacto</h2>
     <p>Escribime por WhatsApp y te responderé rápido:</p>
 
-    <a href="https://wa.me/5491112345678" target="_blank" class="f1-btn">
+    <a href="https://wa.me/5491112345678" target="_blank" class="btn-wsp">
         📱 Enviar WhatsApp
     </a>
 </section>
 
-
-
-<footer class="footer">
-    <div>
-        <p>© <span id="anio"></span> SGmarketing </p>
-    </div>
-    <div class="footer-links">
-        <a href="https://www.instagram.com/el_pabellonb11?igsh=aGk2Z3gyendzYzBl&utm_source=qr" target="_blank"> 📸 Visita nuestro instagram 📸 </a>
-    </div>
-</footer>
-
+<!-- PAGOS -->
 <section id="pagos" class="container">
     <h2>Transferencias Bancarias</h2>
     <p>Realizá tu pago a través de:</p>
@@ -133,8 +132,20 @@
     <img src="mercadopago.jpg" alt="Mercado Pago" id="mp">
 </section>
 
+<!-- FOOTER -->
+<footer class="footer">
+    <div>
+        <p>© <span id="anio"></span> SG Marketing</p>
+    </div>
+    <div class="footer-links">
+        <a href="https://www.instagram.com/el_pabellonb11" target="_blank">
+            📸 Visita nuestro Instagram 📸
+        </a>
+    </div>
+</footer>
 
-<script src="script.js"></script> 
+<script src="script.js"></script>
 
 </body>
 </html>
+
