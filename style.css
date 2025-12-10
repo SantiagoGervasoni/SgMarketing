@@ -4,7 +4,7 @@
   --accent: #b30909;  /* dorado */
   --accent-2: #ffffff;
   --text: #ffffff;
-  --card: #000000;
+  --card: #5a0000;
   --muted: #ffffff;
 }
 
@@ -348,6 +348,7 @@ nav a {
         padding: 8px 0;
     }
 }
+
 
 
 
