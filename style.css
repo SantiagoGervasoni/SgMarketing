@@ -1,156 +1,309 @@
 /* ------------------ GENERAL ------------------ */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+:root{
+  --bg: #530000;      /* rojo base */
+  --accent: #ff0000;  /* dorado */
+  --accent-2: #ffffff;
+  --text: #ffffff;
+  --card: #610000;
+  --muted: #ffffff;
 }
 
-body{
-    background: #ffffff;
-    color: #222;
+
+*{box-sizing:border-box}
+body{Z|
+  margin:0;
+  font-family: Arial, sans-serif;
+  background-color: #530000; /* color sólido */
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
 }
 
-/* ------------------ MENU ------------------ */
+/* NAV */
 .menu{
-    width: 100%;
-    background: #111;
-    padding: 12px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 20px;
+  position:sticky;
+  top:0;
+  background: rgb(0, 0, 0);
+  backdrop-filter: blur(4px);
+  z-index:100;
+}
+.menu .logo{display:flex;align-items:center;gap:10px}
+.menu .logo img{height:38px;border-radius:6px}
+.menu .menu-links a{color:var(--text);text-decoration:none;margin:0 10px;font-weight:600}
+.menu .menu-links{display:flex;align-items:center;gap:6px}
+
+
+  .hero {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* apila verticalmente los hijos */
+    gap: 30px;
+    padding: 40px 20px;
+    align-items: center;    /* centra horizontalmente */
+    justify-content: flex-start;
+    text-align: center;
+}
+
+
+.hero-content{max-width:640px}
+.hero h1{font-size:44px;margin:0;color:var(--accent)}
+.hero p{color:var(--muted);font-size:18px}
+.hero-media img{width:320px;border-radius:12px;border:3px solid var(--accent)}
+
+/* BOTONES F1 (reutilizable) */
+.f1-btn{
+  background-color:var(--accent);
+  color:#000;
+  border:2px solid #410000;
+  padding:10px 18px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  text-transform:uppercase;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.f1-btn:hover{transform:translateY(-3px) scale(1.03); box-shadow:0 6px 20px rgba(255,204,0,0.18)}
+
+/* GHOST BUTTON */
+.ghost-btn{color:var(--accent);text-decoration:none;padding:10px 18px;border-radius:8px;border:1px solid rgba(255,255,255,0.06)}
+
+/* SECCIONES */
+.container{padding:40px 20px;max-width:1100px;margin:0 auto}
+h2{color:var(--accent-2)}
+.cards{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px}
+.card{background:var(--card);padding:18px;border-radius:10px;flex:1;min-width:220px}
+
+/* GALERIA */
+.galeria{display:flex;gap:12px;flex-wrap:wrap}
+.galeria img{width:300px;border-radius:8px;border:3px solid rgba(255,204,0,0.12)}
+
+/* ABOUT / CONTACT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact form{display:flex;flex-direction:column;gap:12px;max-width:520px}
+.contact input, .contact textarea{padding:12px;border-radius:8px;border:1px solid rgba(109, 2, 2, 0.06);background:transparent;color:var(--text)}
+
+/* FOOTER */
+.footer{background:#000000;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border-top:2px solid #ffffff}
+.footer a{color:var(--accent);text-decoration:none;margin-left:14px}
+
+/* RESPONSIVE */
+
+  .hero{flex-direction:column; text-align:center}
+  .hero-media img{width:85%}
+  .about{grid-template-columns:1fr}
+
+
+
+.servicios-lista {
+    display: flex;
+    justify-content: space-around;
     gap: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
-.menu a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    padding: 6px 10px;
+.servicio-box {
+    background-color: #660000; 
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000;
+    transition: 0.3s;
 }
 
-.menu a:hover{
-    color: #0fdc57;
+.servicio-box:hover {
+    transform: scale(1.05);
+    background-color: #990000;
 }
 
-/* ------------------ BANNER ------------------ */
-.banner img{
+.servicio-box h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.servicio-box p {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.menu a:hover {
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+/* Asegura que título y descripción estén en bloque y centrados */
+h1, p {
+    display: block;
     width: 100%;
-    height: auto;
-    object-fit: cover;       /* mantiene el centro de la imagen */
-    object-position: center; /* asegura que no se corte mal */
+    text-align: center;
+    margin: 10px 0;
+    clear: both; /* evita que queden al lado de algo flotante */
+}
+
+/* Carrusel como banner debajo */
+.carrusel {
+    display: block;      /* Bloque completo */
+    width: 80%;
+    height: 300px;
+    position: center;
+    overflow: hidden;
+    margin-top: 20px;    /* Separación del título */
+    clear: both;         /* Asegura que no quede al lado de otros elementos */
+}
+
+/* Slides dentro del carrusel */
+.carrusel .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carrusel .slide {
+    min-width: 100%;
+    display: none;
+    object-fit: cover;
+    height: 100%;
+}
+
+.carrusel .slide.activo {
     display: block;
 }
 
-/* ------------------ SERVICIOS ------------------ */
-.servicios{
-    padding: 40px 20px;
-    text-align: center;
+/* Botones */
+.carrusel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
 }
 
-.contenedor-servicios{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
+.carrusel .prev { left: 10px; }
+.carrusel .next { right: 10px; }
+
+.carrusel button:hover {
+    background-color: rgba(0,0,0,0.7);
 }
 
-.card{
-    background: #f7f7f7;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
-    transition: 0.2s;
+/* Responsive */
+@media (max-width: 768px) {
+    .carrusel {
+        height: 200px;
+    }
+    .carrusel button {
+        font-size: 1.5em;
+        padding: 4px 10px;
+    }
+}
+.contact {
+    text-align: center; /* centra todo */
+    margin-top: 40px;
 }
 
-.card:hover{
-    transform: scale(1.05);
-}
-
-.card img{
-    width: 100%;
-    border-radius: 10px;
-    height: 140px;
-    object-fit: cover;
-}
-
-/* ------------------ CONTACTO ------------------ */
-.contacto{
-    padding: 40px 20px;
-    text-align: center;
-}
-
-/* BOTÓN DE WHATSAPP */
-.btn-wsp{
-    display: inline-block;
-    background: #25D366;
-    color: #fff;
-    padding: 12px 18px;
+.contact a.f1-btn {
+    margin-top: 20px;
     font-size: 18px;
-    border-radius: 40px;
+    padding: 12px 24px;
+}
+
+.footer-links a {
+    color: var(--accent);
     text-decoration: none;
-    margin-top: 35px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    margin-left: 14px;
+    font-weight: 600;
+    transition: color 0.2s ease;
 }
 
-.btn-wsp:hover{
-    background: #1ebc5a;
+.footer-links a:hover {
+    color: #ffffff;
 }
 
-/* ------------------ RESPONSIVE ------------------ */
+/* Estilos específicos para la sección pagos y la imagen */
+section#pagos img#mp {
+    border: 5px solid #000000;       /* borde amarillo dorado */
+    border-radius: 15px;              /* esquinas redondeadas */
+    padding: 5px;                     /* espacio entre borde y la imagen */
+    box-shadow: 0 4px 8px rgb(116, 0, 0); /* sombra para efecto 3D */
+    width: 300px;                     /* ancho de la imagen */
+    display: block;                   /* asegurar que se comporte como bloque */
+    margin: 10px auto;                /* centra la imagen horizontalmente */
+ 
+}
 
-/* Ajustes para celulares */
-@media (max-width: 768px){
+nav a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+}
 
-    .menu{
+/* Ajustes para pantallas chicas */
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
-        padding: 10px 0;
-    }
-
-    .menu a{
-        font-size: 13px;
-    }
-
-    /* Forzar 3 arriba y 2 abajo si hay 5 elementos */
-    .contenedor-servicios{
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* Si hay más o menos servicios igual se adapta bien */
-
-    .card img{
-        height: 120px;
     }
 }
 
-/* EXTRA chico (celus muy pequeños) */
-@media (max-width: 480px){
+/* --- ESTILOS GENERALES DEL NAV --- */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
 
-    .menu{
-        gap: 5px;
-        flex-wrap: wrap;
-    }
+/* Hace que los links del menú estén ordenados horizontalmente en PC */
+.menu-links {
+    display: flex;
+    gap: 20px;
+}
 
-    .menu a{
-        font-size: 12px;
-    }
-
-    .contenedor-servicios{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card img{
-        height: 110px;
-    }
+.menu-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 
+/* --- VERSION PARA CELULARES --- */
+@media (max-width: 768px) {
 
+    /* El menú completo se acomoda en columna */
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    /* Los links se apilan verticalmente */
+    .menu-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
 
+    .menu-links a {
+        font-size: 20px;
+        padding: 10px;
+    }
 
-
+    .logo img {
+        width: 150px; /* reduce imagen del logo para celular */
+    }
+}
