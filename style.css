@@ -1,7 +1,7 @@
 /* ------------------ GENERAL ------------------ */
 :root{
-  --bg: #530000;      /* rojo base */
-  --accent: #ff0000;  /* dorado */
+ --bg: #000000;      /* rojo base */
+  --accent: #ffffff;  /* dorado */
   --accent-2: #ffffff;
   --text: #ffffff;
   --card: #610000;
@@ -348,6 +348,7 @@ nav a {
         padding: 8px 0;
     }
 }
+
 
 
 
