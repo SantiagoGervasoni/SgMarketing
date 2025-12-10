@@ -1,6 +1,5 @@
-/* ------------------ GENERAL ------------------ */
 :root{
- --bg: #000000;      /* rojo base */
+  --bg: #000000;      /* rojo base */
   --accent: #ffffff;  /* dorado */
   --accent-2: #ffffff;
   --text: #ffffff;
@@ -53,24 +52,18 @@ body{Z|
 .hero p{color:var(--muted);font-size:18px}
 .hero-media img{width:320px;border-radius:12px;border:3px solid var(--accent)}
 
-.btn-wsp {
-    display: inline-block;
-    text-decoration: none;
-    background: #25D366;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 20px auto;
-    display: block;      /* esto permite centrarlo */
-    width: fit-content;  /* el ancho se ajusta al texto */
-    text-align: center;  /* centra el contenido interno */
+/* BOTONES F1 (reutilizable) */
+.f1-btn{
+  background-color:var(--accent);
+  color:#000;
+  border:2px solid #410000;
+  padding:10px 18px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  text-transform:uppercase;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
 }
-#contacto {
-    text-align: center;
-}
-
 .f1-btn:hover{transform:translateY(-3px) scale(1.03); box-shadow:0 6px 20px rgba(255,204,0,0.18)}
 
 /* GHOST BUTTON */
@@ -140,7 +133,7 @@ html {
 }
 
 .menu a:hover {
-   background-color: #666666;
+    background-color: #666666;
     color: rgb(0, 0, 0);
     padding: 6px 12px;
     border-radius: 5px;
@@ -154,19 +147,18 @@ h1, p {
     clear: both; /* evita que queden al lado de algo flotante */
 }
 
-/* ================================
-   Carrusel como banner
-================================ */
+/* Carrusel como banner debajo */
 .carrusel {
-    position: relative;
-    width: 80%;           /* Ajusta al ancho de tu diseño */
-    max-width: 700px;     /* Tamaño máximo */
+    display: block;      /* Bloque completo */
+    width: 80%;
     height: 300px;
-    margin: 20px auto 0;  /* Centrado con margen superior */
+    position: center;
     overflow: hidden;
+    margin-top: 20px;    /* Separación del título */
+    clear: both;         /* Asegura que no quede al lado de otros elementos */
 }
 
-/* Slides */
+/* Slides dentro del carrusel */
 .carrusel .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -184,57 +176,38 @@ h1, p {
     display: block;
 }
 
-/* Botones (Flechas) */
-.carrusel button.prev,
-.carrusel button.next {
+/* Botones */
+.carrusel button {
     position: absolute;
-    top: 50%;                /* Centra verticalmente */
+    top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,0.5);
     color: white;
     border: none;
-    padding: 10px 14px;
+    font-size: 2em;
+    padding: 5px 12px;
     cursor: pointer;
-    font-size: 24px;
     border-radius: 50%;
     z-index: 10;
 }
 
-/* Flechas a los costados */
-.carrusel button.prev {
-    left: -50px;     /* MUEVE hacia afuera del carrusel */
-}
-
-.carrusel button.next {
-    right: -50px;    /* MUEVE hacia afuera del carrusel */
-}
+.carrusel .prev { left: 10px; }
+.carrusel .next { right: 10px; }
 
 .carrusel button:hover {
     background-color: rgba(0,0,0,0.7);
 }
 
-/* ================================
-   Responsive
-================================ */
+/* Responsive */
 @media (max-width: 768px) {
     .carrusel {
-        width: 95%;
-        height: 220px;
+        height: 200px;
     }
-
-    .carrusel button.prev {
-        left: -30px;   /* Más cerca en mobile */
-    }
-    .carrusel button.next {
-        right: -30px;
-    }
-
     .carrusel button {
-        font-size: 20px;
-        padding: 8px 12px;
+        font-size: 1.5em;
+        padding: 4px 10px;
     }
 }
-
 .contact {
     text-align: center; /* centra todo */
     margin-top: 40px;
@@ -308,44 +281,29 @@ nav a {
 }
 
 
-/* ------------------ MENU SOLO PARA CELULARES ------------------ */
-@media (max-width: 768px){
+/* --- VERSION PARA CELULARES --- */
+@media (max-width: 768px) {
 
-    /* Mantiene el menú igual que en PC, salvo acomodar botones */
+    /* El menú completo se acomoda en columna */
     .menu {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-
-    /* GRID DE 3 × 2 SOLO EN CELULAR — PC NO CAMBIA */
-    .menu-links{
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        width: 100%;
-        max-width: 380px;
         text-align: center;
-        justify-content: center;
     }
 
-    .menu-links a{
-        padding: 10px 0;
-        font-size: 14px;
-        border-radius: 6px;
-    }
-}
-
-/* Celulares muy pequeños */
-@media (max-width: 480px){
-    .menu-links{
-        max-width: 300px;
-        gap: 8px;
+    /* Los links se apilan verticalmente */
+    .menu-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
     }
 
-    .menu-links a{
-        font-size: 13px;
-        padding: 8px 0;
+    .menu-links a {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 150px; /* reduce imagen del logo para celular */
     }
 }
 
