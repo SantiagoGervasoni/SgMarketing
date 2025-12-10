@@ -152,18 +152,7 @@ h1, p {
     clear: both;
 }
 
-/* CARRUSEL (mismos estilos, pero neutros) */
-.carrusel {
-    position: relative;
-    width: 80%;
-    max-width: 700px;
-    height: 300px;
-    margin: 20px auto 0;
-    overflow: hidden;
-}
-.carrusel button.prev, .carrusel button.next {
-    background: rgba(0,0,0,0.4);
-}
+
 
 /* PAGOS IMG */
 section#pagos img#mp {
@@ -206,6 +195,81 @@ section#pagos img#mp {
     .menu-links a{
         font-size: 13px;
         padding: 8px 0;
+    }
+}
+
+/* ================================
+   Carrusel centrado y funcional
+================================ */
+.carrusel {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    height: 300px;
+    margin: 20px auto;       /* <-- esto lo centra correctamente */
+    overflow: hidden;
+}
+
+/* Slides */
+.carrusel .slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel .slide {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.carrusel .slide.activo {
+    display: block;
+}
+
+/* Flechas */
+.carrusel button.prev,
+.carrusel button.next {
+    position: absolute;
+    top: 50%;                  
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    z-index: 10;
+}
+
+/* Las flechas a los costados */
+.carrusel button.prev {
+    left: 10px;        /* NO hacia afuera */
+}
+
+.carrusel button.next {
+    right: 10px;
+}
+
+.carrusel button:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px){
+    .carrusel {
+        width: 95%;
+        height: 220px;
+    }
+
+    .carrusel button.prev { left: 5px; }
+    .carrusel button.next { right: 5px; }
+
+    .carrusel button {
+        font-size: 18px;
+        padding: 8px 10px;
     }
 }
 
