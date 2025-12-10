@@ -1,107 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>SG Marketing</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-<!-- ------------------ MENÚ ------------------ -->
 <nav class="menu">
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#tipos">Tipos de servicio</a>
-    <a href="#sobre_mi">Sobre mí</a>
-    <a href="#contacto">Contacto</a>
-    <a href="#pagos">Pagos</a>
+    <div class="logo">
+        <img src="SGindumentaria (1).png" alt="BIENVENIDOS" width="200">
+
+        <span>BIENVENIDOS</span>
+    </div>
+    <div class="menu-links">
+        <a href="#"onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a href="#"onclick="mostrarSeccion('servicios')">Servicios</a>
+        <a href="#"onclick="mostrarSeccion('tipos_de_servicio')">Tipos de servicios</a>
+        <a href="#"onclick="mostrarSeccion('sobre_mi')">Sobre mi</a>
+        <a href="#"onclick="mostrarSeccion('contacto')">Contacto</a>
+        <a href="#"onclick="mostrarSeccion('pagos')">Pagos</a>
+    </div>
+     
 </nav>
 
-<!-- ------------------ BANNER ------------------ -->
-<div class="banner" id="inicio">
-    <img src="portada.jpg" alt="Banner principal">
+<header
+<section id="inicio" class="hero">
+<h1>SG Marketing</h1>
+<p><B>Impulsamos tu marca mediante herramientas originales con un crecimiento exponencial</B></p>
+
+    <div class="carrusel">
+        <div class="slides">
+            <img src="frases1.jpg" alt="Imagen 1" class="slide activo">
+            <img src="frases2.jpg" alt="Imagen 2" class="slide">
+            <img src="frases3.jpg" alt="Imagen 3" class="slide">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    
+        <div class="hero-actions">
+            <button class="f1-btn" onclick="scrollToSection('#servicios')">Servicios</button>
+            <a class="ghost-btn" href="#servicios">Ver tipos de servicios</a>
+        </div>
+    </div>
+    <div class="hero-media">
+        <img src="assets/portada.jpg" alt="Marketing" />
+    </div>
+</header>
+
+<section id="servicios" class="container">
+    <h2>Servicios</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Marketing digital</h3>
+            <p>Nosotros podemos crear tu tienda o pagina web para que empiezes a facturar mas!</p>
+        </div>
+        <div class="card">
+            <h3>Mantenimiento</h3>
+            <p>Agregar productos y chequear que todo siga bien</p>
+        </div>
+        <div class="card">
+            <h3>Branding & Diseño</h3>
+            <p>Logotipos, paleta de colores y piezas gráficas para redes y web.</p>
+        </div>
+    </div>
+</section>
+
+<section id="tipos_de_servicio" class="container">
+    
+    <h2 id="servicios">Tipos de servicios</h2>
+
+<div class="servicios-lista">
+
+    <div class="servicio-box">
+        <h3>Tiendas Nube</h3>
+        <p>Creamos tu tienda online desde cero usando Tienda Nube, lista para vender, enlazada con medios de pago y con diseño profesional.</p>
+    </div>
+
+    <div class="servicio-box">
+        <h3>Páginas web personalizadas</h3>
+        <p>Desarrollo páginas web modernas y rápidas programando todo yo mismo asi que este servicio es 100% perzonalizado para cualquier tipo de negocio, agencia, proyecto social etc.</p>
+    </div>
+
 </div>
 
-<!-- ------------------ SERVICIOS ------------------ -->
-<section class="servicios" id="servicios">
-    <h2>Servicios</h2>
+</section>
 
-    <div class="contenedor-servicios">
-        <div class="card">
-            <img src="frases1.jpg" alt="Marketing digital">
-            <h3>Marketing digital</h3>
-            <p>Creación de páginas web para impulsar tu negocio.</p>
-        </div>
-
-        <div class="card">
-            <img src="frases2.jpg" alt="Mantenimiento">
-            <h3>Mantenimiento</h3>
-            <p>Actualización de productos y optimización continua.</p>
-        </div>
-
-        <div class="card">
-            <img src="frases3.jpg" alt="Branding">
-            <h3>Branding & Diseño</h3>
-            <p>Logotipos, colores y contenido gráfico profesional.</p>
-        </div>
-
-        <div class="card">
-            <img src="frases2.jpg">
-            <h3>Tiendas Nube</h3>
-            <p>Tiendas configuradas desde cero listas para vender.</p>
-        </div>
-
-        <div class="card">
-            <img src="frases1.jpg">
-            <h3>Web Personalizada</h3>
-            <p>Desarrollo 100% a medida para cualquier negocio.</p>
-        </div>
+<section id="sobre_mi" class="container about">
+    <div>
+        <h2>Sobre mí</h2>
+        <p>Soy Santiago, Un joven que quiere empezar a trabajar diseñando este tipo de paginas desde casa</p>
     </div>
-</section>
-
-<!-- ------------------ TIPOS DE SERVICIO ------------------ -->
-<section class="servicios" id="tipos">
-    <h2>Tipos de servicio</h2>
-
-    <div class="contenedor-servicios">
-        <div class="card">
-            <h3>Tiendas Nube</h3>
-            <p>Creamos tu tienda lista para vender con diseño profesional.</p>
-        </div>
-
-        <div class="card">
-            <h3>Páginas web personalizadas</h3>
-            <p>Sitios modernos y rápidos, programados desde cero.</p>
-        </div>
+    <div>
+        <h3>Por qué elegir SG Marketing</h3>
+        <ul>
+            <li>Tenemos buenos precios y descuentos</li>
+            <li>Variedad de diseños</li>
+            <li>Comunicación directa y clara</li>
+        </ul>
     </div>
-</section>
-
-<!-- ------------------ SOBRE MÍ ------------------ -->
-<section class="servicios" id="sobre_mi">
-    <h2>Sobre mí</h2>
-    <p>Soy Santiago, diseñador web que crea páginas modernas y efectivas para negocios.</p>
-</section>
-
-<!-- ------------------ CONTACTO ------------------ -->
-<section class="contacto" id="contacto">
+</section> 
+<section id="contacto" class="container contact">
     <h2>Contacto</h2>
-    <p>Escribime por WhatsApp y te respondo enseguida:</p>
+    <p>Escribime por WhatsApp y te responderé rápido:</p>
 
-    <!-- BOTÓN ORIGINAL RESTAURADO -->
-    <a class="btn-wsp" href="https://wa.me/5491112345678" target="_blank">
+    <a href="https://wa.me/5491112345678" target="_blank" class="f1-btn">
         📱 Enviar WhatsApp
     </a>
 </section>
 
-<!-- ------------------ PAGOS ------------------ -->
-<section class="servicios" id="pagos">
+
+
+<footer class="footer">
+    <div>
+        <p>© <span id="anio"></span> SGmarketing </p>
+    </div>
+    <div class="footer-links">
+        <a href="https://www.instagram.com/el_pabellonb11?igsh=aGk2Z3gyendzYzBl&utm_source=qr" target="_blank"> 📸 Visita nuestro instagram 📸 </a>
+    </div>
+</footer>
+
+<section id="pagos" class="container">
     <h2>Transferencias Bancarias</h2>
+    <p>Realizá tu pago a través de:</p>
     <ul>
         <li>Banco: Mercado Pago</li>
         <li>Titular: Santiago Bautista Gervasoni</li>
         <li><b>CONSULTAR ALIAS POR WHATSAPP ANTES DE TRANSFERIR</b></li>
     </ul>
 
-    <img src="mercadopa
+    <img src="mercadopago.jpg" alt="Mercado Pago" id="mp">
+</section>
+
+
+<script src="script.js"></script> 
+
+</body>
+</html>
