@@ -26,7 +26,7 @@ body{Z|
   padding:12px 20px;
   position:sticky;
   top:0;
-  background: rgb(0, 0, 0);
+  background: rgb(85, 85, 85);
   backdrop-filter: blur(4px);
   z-index:100;
 }
@@ -306,6 +306,7 @@ nav a {
         width: 150px; /* reduce imagen del logo para celular */
     }
 }
+
 
 
 
