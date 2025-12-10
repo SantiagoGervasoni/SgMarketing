@@ -214,7 +214,44 @@ h1, p {
         font-size: 1.5em;
         padding: 4px 10px;
     }
+} .carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
 }
+
+.carrusel img {
+    width: 100%;
+    display: none;
+}
+
+.carrusel img.activo {
+    display: block;
+}
+
+.carrusel button.prev,
+.carrusel button.next {
+    position: absolute;
+    top: 50%;              /* Centra verticalmente las flechas */
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.carrusel button.prev {
+    left: -50px;           /* Mueve la flecha izquierda hacia afuera del carrusel */
+}
+
+.carrusel button.next {
+    right: -50px;          /* Mueve la flecha derecha hacia afuera del carrusel */
+}
+
 .contact {
     text-align: center; /* centra todo */
     margin-top: 40px;
@@ -328,6 +365,7 @@ nav a {
         padding: 8px 0;
     }
 }
+
 
 
 
