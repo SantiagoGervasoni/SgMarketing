@@ -243,4 +243,62 @@ section#pagos img#mp {
  
 }
 
+/* Ajustes para pantallas chicas */
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+/* --- ESTILOS GENERALES DEL NAV --- */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Hace que los links del menú estén ordenados horizontalmente en PC */
+.menu-links {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* --- VERSION PARA CELULARES --- */
+@media (max-width: 768px) {
+
+    /* El menú completo se acomoda en columna */
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Los links se apilan verticalmente */
+    .menu-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .menu-links a {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 150px; /* reduce imagen del logo para celular */
+    }
+}
+
 
