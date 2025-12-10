@@ -4,7 +4,7 @@
   --accent: #ffffff;  /* dorado */
   --accent-2: #ffffff;
   --text: #ffffff;
-  --card: #610000;
+  --card: #000000;
   --muted: #ffffff;
 }
 
@@ -140,8 +140,8 @@ html {
 }
 
 .menu a:hover {
-    background-color: #ff0000;
-    color: rgb(255, 255, 255);
+   background-color: #666666;
+    color: rgb(0, 0, 0);
     padding: 6px 12px;
     border-radius: 5px;
 }
@@ -348,6 +348,7 @@ nav a {
         padding: 8px 0;
     }
 }
+
 
 
 
