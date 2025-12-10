@@ -1,23 +1,14 @@
-Tú dijiste:
-/* ------------------ GENERAL ------------------ */
-:root{
- --bg: #550000;      /* rojo base */
-  --accent: #b30909;  /* dorado */
-  --accent-2: #ffffff;
-  --text: #ffffff;
-  --card: #5a0000;
-  --muted: #ffffff;
+body, h1, h2, h3, h4, h5, h6, p, span, li, input, textarea, button {
+    color: #fdfdfd ;
 }
- body, h1, h2, h3, h4, h5, h6, p, a, li, input, textarea, button {
-    color: #ffffff !important;
-}
-no toques nada de la estructura solo ponle colores neutros 
 
 *{box-sizing:border-box}
 body{Z|
+   
+
   margin:0;
   font-family: Arial, sans-serif;
-  background-color: #530000; /* color sólido */
+  background-color: #e0e0e0;; /* color sólido */
   color:var(--text);
   -webkit-font-smoothing:antialiased;
   line-height:1.5;
@@ -31,9 +22,10 @@ body{Z|
   padding:12px 20px;
   position:sticky;
   top:0;
-  background: rgb(0, 0, 0);
+  background: #acacac;
   backdrop-filter: blur(4px);
   z-index:100;
+  color:#ffffff;
 }
 .menu .logo{display:flex;align-items:center;gap:10px}
 .menu .logo img{height:38px;border-radius:6px}
@@ -60,8 +52,8 @@ body{Z|
 .btn-wsp {
     display: inline-block;
     text-decoration: none;
-    background: #25D366;
-    color: white;
+    background: #000000;
+    color: rgb(0, 0, 0);
     padding: 12px 20px;
     border-radius: 8px;
     font-size: 18px;
@@ -96,7 +88,7 @@ h2{color:var(--accent-2)}
 .contact input, .contact textarea{padding:12px;border-radius:8px;border:1px solid rgba(109, 2, 2, 0.06);background:transparent;color:var(--text)}
 
 /* FOOTER */
-.footer{background:#000000;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border-top:2px solid #ffffff}
+.footer{background:#acacac;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border-top:2px solid #ffffff}
 .footer a{color:var(--accent);text-decoration:none;margin-left:14px}
 
 /* RESPONSIVE */
@@ -116,17 +108,17 @@ h2{color:var(--accent-2)}
 }
 
 .servicio-box {
-    background-color: #660000; 
+    background-color: #acacac; 
     padding: 20px;
     width: 300px;
     border-radius: 15px;
-    box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px #ffffff;
     transition: 0.3s;
 }
 
 .servicio-box:hover {
     transform: scale(1.05);
-    background-color: #990000;
+    background-color: #000000;
 }
 
 .servicio-box h3 {
@@ -144,7 +136,7 @@ html {
 }
 
 .menu a:hover {
-   background-color: #666666;
+   background-color: #707070;
     color: rgb(0, 0, 0);
     padding: 6px 12px;
     border-radius: 5px;
@@ -163,7 +155,7 @@ h1, p {
 ================================ */
 .carrusel {
     position: relative;
-    width: 80%;           /* Ajusta al ancho de tu diseño */
+    width: 90%;           /* Ajusta al ancho de tu diseño */
     max-width: 700px;     /* Tamaño máximo */
     height: 300px;
     margin: 20px auto 0;  /* Centrado con margen superior */
@@ -205,16 +197,12 @@ h1, p {
 }
 
 /* Flechas a los costados */
-.carrusel button.prev {
-    left: -50px;     /* MUEVE hacia afuera del carrusel */
-}
+.carrusel button.prev { left: 10px; }
+.carrusel button.next { right: 10px; }
 
-.carrusel button.next {
-    right: -50px;    /* MUEVE hacia afuera del carrusel */
-}
 
 .carrusel button:hover {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* ================================
@@ -267,7 +255,7 @@ section#pagos img#mp {
     border: 5px solid #000000;       /* borde amarillo dorado */
     border-radius: 15px;              /* esquinas redondeadas */
     padding: 5px;                     /* espacio entre borde y la imagen */
-    box-shadow: 0 4px 8px rgb(116, 0, 0); /* sombra para efecto 3D */
+    box-shadow: 0 4px 8px rgb(255, 255, 255); /* sombra para efecto 3D */
     width: 300px;                     /* ancho de la imagen */
     display: block;                   /* asegurar que se comporte como bloque */
     margin: 10px auto;                /* centra la imagen horizontalmente */
@@ -306,7 +294,7 @@ nav a {
 
 .menu-links a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 18px;
 }
@@ -351,5 +339,39 @@ nav a {
         font-size: 13px;
         padding: 8px 0;
     }
+} 
+/* === HACER QUE LOS SERVICIOS ARRIBA SE VEAN IGUALES A LOS DE ABAJO === */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
 }
 
+/* Caja del servicio (arriba) igual a la de servicio-box (abajo) */
+.card {
+    background-color: #acacac; 
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ffffff;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #000000;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #ffffff !important;
+}
+
+.card p {
+    font-size: 16px;
+    color: #ffffff !important;
+}
