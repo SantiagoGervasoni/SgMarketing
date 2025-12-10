@@ -307,3 +307,63 @@ nav a {
         width: 150px; /* reduce imagen del logo para celular */
     }
 }
+/* ------------------ MENU RESPONSIVE (CELULARES) ------------------ */
+@media (max-width: 768px){
+
+    /* Menú más chico */
+    .menu{
+        padding: 6px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    /* Logo más chico */
+    .menu .logo img{
+        width: 130px;
+    }
+
+    .menu .logo span{
+        font-size: 14px;
+    }
+
+    /* Contenedor de enlaces en 2 filas de 3 */
+    .menu-links{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+        gap: 8px;
+    }
+
+    /* Botones más pequeños */
+    .menu-links a{
+        font-size: 12px;
+        padding: 6px 0;
+        background: #222;
+        border-radius: 6px;
+    }
+}
+
+/* CELULARES MUY PEQUEÑOS */
+@media (max-width: 480px){
+    .menu{
+        padding: 4px 0;
+    }
+
+    .menu .logo img{
+        width: 110px;
+    }
+
+    .menu-links{
+        max-width: 300px;
+        gap: 6px;
+    }
+
+    .menu-links a{
+        font-size: 11px;
+        padding: 5px 0;
+    }
+}
+
