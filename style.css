@@ -1,5 +1,11 @@
-body, h1, h2, h3, h4, h5, h6, p, span, li, input, textarea, button {
-    color: #fdfdfd ;
+:root {
+  --bg: #530000;        /* Fondo rojo oscuro */
+  --accent: #b30909;    /* Rojo más brillante */
+  --accent-2: #ffffff;  /* Blanco */
+  --text: #ffffff;      /* Texto blanco */
+  --card: #5a0000;      /* Tarjetas */
+  --muted: #ffffff;
+  --color: white;
 }
 
 *{box-sizing:border-box}
@@ -446,5 +452,6 @@ nav a {
     height: 100%;
     border-radius: 15px;
 }
+
 
 
