@@ -383,4 +383,26 @@ nav a {
 #pagos li {
     color: #000000;
 }
+/* Eliminar azul y subrayado de los botones de servicios */
+.servicio-box {
+    text-decoration: none !important;  /* sin subrayado */
+    color: inherit !important;         /* que mantenga los colores que ya definiste */
+    display: block;
+    border-radius: 15px;
+}
+
+/* Asegura que no cambie al púrpura visited */
+.servicio-box:visited {
+    color: inherit !important;
+}
+
+/* Evita que se ponga azul al hacer hover */
+.servicio-box:hover {
+    text-decoration: none !important;
+}
+.servicio-box h3,
+.servicio-box p {
+    color: white !important;
+    text-align: center;
+}
 
