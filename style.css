@@ -405,4 +405,46 @@ nav a {
     color: white !important;
     text-align: center;
 }
+/* ===========================
+   Estilos página de servicios
+=========================== */
+
+/* Que tome los mismos colores que el resto de la web */
+.pagina-servicio {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: inherit; /* usa la misma fuente */
+    padding: 20px;
+}
+
+/* Títulos */
+.titulo-video {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--text);
+}
+
+/* Contenedor del video */
+.videos-container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* Adaptar video al ancho */
+.video-wrapper {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* relación 16:9 */
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
 
