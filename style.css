@@ -1,13 +1,12 @@
 :root {
-  --bg: #530000;        /* Fondo rojo oscuro */
-  --accent: #b30909;    /* Rojo más brillante */
-  --accent-2: #ffffff;  /* Blanco */
-  --text: #ffffff;      /* Texto blanco */
-  --card: #5a0000;      /* Tarjetas */
-  --muted: #ffffff;
-  --color: white;
+  --bg: #000000;        /* Fondo rojo oscuro */
+  --accent: #000000;    /* Rojo más brillante */
+  --accent-2: #000000;  /* Blanco */
+  --text: #000000;      /* Texto blanco */
+  --card: #000000;      /* Tarjetas */
+  --muted: #000000;
+  --color: rgb(0, 0, 0);
 }
-
 *{box-sizing:border-box}
 body{Z|
    
@@ -118,7 +117,7 @@ h2{color:var(--accent-2)}
     padding: 20px;
     width: 300px;
     border-radius: 15px;
-    box-shadow: 0 0 10px #ffffff;
+    box-shadow: 0 0 10px #000000;
     transition: 0.3s;
 }
 
@@ -452,6 +451,7 @@ nav a {
     height: 100%;
     border-radius: 15px;
 }
+
 
 
 
