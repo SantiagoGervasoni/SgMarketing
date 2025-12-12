@@ -483,6 +483,14 @@ body.pagina-servicio {
 .btn-portafolio:hover {
     background-color: #000000;
 }
+.proceso-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 80%;
+    margin: 40px auto;
+}
+
 .proceso-box {
     background: #acacac;
     padding: 20px;
@@ -511,6 +519,8 @@ body.pagina-servicio {
 .proceso-box:hover p {
     color: rgb(255, 255, 255);
 }
+
+
 
 
 
