@@ -451,6 +451,19 @@ nav a {
     height: 100%;
     border-radius: 15px;
 }
+/* Estilo exclusivo para la página de Tienda Nube */
+body.pagina-servicio {
+    background-color: #e0e0e0 !important; /* mismo gris del resto */
+    color: #000000 !important; /* texto en negro para que no parezca modo oscuro */
+}
+
+body.pagina-servicio h1,
+body.pagina-servicio h2,
+body.pagina-servicio h3,
+body.pagina-servicio p {
+    color: #000000 !important;
+}
+
 
 
 
