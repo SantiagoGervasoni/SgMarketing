@@ -476,12 +476,13 @@ body.pagina-servicio {
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
+    box-shadow:#000000;
 }
 
 .btn-portafolio:hover {
     background-color: #000000;
-  box-shadow:#000000;
 }
+
 
 
 
