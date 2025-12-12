@@ -480,7 +480,9 @@ body.pagina-servicio {
 
 .btn-portafolio:hover {
     background-color: #000000;
+  box-shadow:#000000;
 }
+
 
 
 
