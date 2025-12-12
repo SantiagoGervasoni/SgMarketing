@@ -469,7 +469,7 @@ body.pagina-servicio {
 
 .btn-portafolio {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #acacac;
     color: white;
     padding: 12px 25px;
     border-radius: 8px;
@@ -479,8 +479,9 @@ body.pagina-servicio {
 }
 
 .btn-portafolio:hover {
-    background-color: #0056b3;
+    background-color: #000000;
 }
+
 
 
 
