@@ -477,11 +477,41 @@ body.pagina-servicio {
     font-weight: 600;
     transition: 0.3s;
     box-shadow:#000000;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4); 
 }
 
 .btn-portafolio:hover {
     background-color: #000000;
 }
+.proceso-box {
+    background: #acacac;
+    padding: 20px;
+    color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+
+    /* ⭐ Sombra negra suave como las tarjetas de arriba */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proceso-box:hover {
+    background: #000000;
+    color: white;
+
+    /* ⭐ Si querés sombra un poco más fuerte al pasar el mouse */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
+
+}
+
+.proceso-box:hover h3,
+.proceso-box:hover p {
+    color: rgb(255, 255, 255);
+}
+
 
 
 
