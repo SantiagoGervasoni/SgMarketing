@@ -519,6 +519,14 @@ body.pagina-servicio {
 .proceso-box:hover p {
     color: rgb(255, 255, 255);
 }
+     @media (min-width: 1024px) {
+    .carrusel {
+        width: 1000px;   /* MÁS ANCHO EN PC */
+        max-width: 100%;
+    }
+}
+
+
 
 
 
