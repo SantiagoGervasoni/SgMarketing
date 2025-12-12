@@ -463,6 +463,10 @@ body.pagina-servicio h3,
 body.pagina-servicio p {
     color: #000000 !important;
 }
+body.pagina-servicio {
+    font-family: Arial, sans-serif !important;
+}
+
 
 
 
