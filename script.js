@@ -6,38 +6,32 @@ function scrollToSection(id){
   const el = document.querySelector(id);
   if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
 }
-const slides = document.querySelectorAll('.carrusel .slide');
-const prev = document.querySelector('.carrusel .prev');
-const next = document.querySelector('.carrusel .next');
+const slides = document.querySelectorAll('.slide');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
 
 let index = 0;
 
 function mostrarSlide(i) {
-    slides.forEach((slide, idx) => {
-        slide.classList.remove('activo');
-        if(idx === i) slide.classList.add('activo');
-    });
+  slides.forEach(s => s.classList.remove('activo'));
+  slides[i].classList.add('activo');
 }
 
-// Mostrar el primer slide al inicio
-mostrarSlide(index);
+prev.onclick = () => {
+  index = (index - 1 + slides.length) % slides.length;
+  mostrarSlide(index);
+};
 
-// Botones
-prev.addEventListener('click', () => {
-    index = (index - 1 + slides.length) % slides.length;
-    mostrarSlide(index);
-});
+next.onclick = () => {
+  index = (index + 1) % slides.length;
+  mostrarSlide(index);
+};
 
-next.addEventListener('click', () => {
-    index = (index + 1) % slides.length;
-    mostrarSlide(index);
-});
-
-// Cambio automático cada 3 segundos
 setInterval(() => {
-    index = (index + 1) % slides.length;
-    mostrarSlide(index);
+  index = (index + 1) % slides.length;
+  mostrarSlide(index);
 }, 3000);
+
 function mostrarSeccion(id) {
     // Ocultar todas las secciones
     const secciones = document.querySelectorAll('section');
@@ -56,6 +50,7 @@ function mostrarSeccion(id) {
 
 
     
+
 
 
 
