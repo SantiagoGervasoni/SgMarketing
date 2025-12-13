@@ -250,10 +250,11 @@ h1, p {
     margin-left: 14px;
     font-weight: 600;
     transition: color 0.2s ease;
+    color: #ffffff;
 }
 
 .footer-links a:hover {
-    color: #ffffff;
+    color: #000000;
 }
 
 /* Estilos específicos para la sección pagos y la imagen */
@@ -555,6 +556,7 @@ body.pagina-servicio {
     margin: 1px 0;
     line-height: 3;
 }
+
 
 
 
