@@ -547,6 +547,15 @@ body.pagina-servicio {
     }
 }
 
+.hero h1 {
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin: 1px 0;
+    line-height: 3;
+}
+
 
 
 
