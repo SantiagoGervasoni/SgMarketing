@@ -34,7 +34,7 @@ body{Z|
 }
 .menu .logo{display:flex;align-items:center;gap:10px}
 .menu .logo img{height:38px;border-radius:6px}
-.menu .menu-links a{color:var(--text);text-decoration:none;margin:0 10px;font-weight:600}
+.menu .menu-links a{color:#ffffff(--text);text-decoration:none;margin:0 10px;font-weight:600}
 .menu .menu-links{display:flex;align-items:center;gap:6px}
 
 
@@ -555,6 +555,7 @@ body.pagina-servicio {
     margin: 1px 0;
     line-height: 3;
 }
+
 
 
 
