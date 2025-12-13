@@ -521,12 +521,32 @@ body.pagina-servicio {
 }
 @media (min-width: 1024px) {
     .carrusel {
-        width: 90vw;          /* ocupa casi toda la pantalla */
-        max-width: 1200px;    /* límite profesional */
-        height: 420px;        /* más alto */
-        margin-top: 40px;
+        width: 100%;
+        max-width: 1300px;   /* ancho tipo agencia */
+        height: 480px;       /* banner alto */
+        margin: 50px auto 0;
+        border-radius: 18px;
+        
+        /* sombra premium */
+        box-shadow: 
+            0px 20px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .carrusel .slide {
+        object-fit: cover;
+        filter: brightness(0.9) contrast(1.05);
     }
 }
+
+/* EXTRA: pantallas MUY grandes */
+@media (min-width: 1400px) {
+    .carrusel {
+        max-width: 1500px;
+        height: 520px;
+    }
+}
+
+
 
 
 
