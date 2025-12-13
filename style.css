@@ -94,7 +94,7 @@ h2{color:var(--accent-2)}
 
 /* FOOTER */
 .footer{background:#acacac;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border-top:2px solid #000000}
-.footer a{color:var(--accent);text-decoration:none;margin-left:14px}
+.footer a{color:#ffffff(--accent);text-decoration:none;margin-left:14px}
 
 /* RESPONSIVE */
 
@@ -556,6 +556,7 @@ body.pagina-servicio {
     margin: 1px 0;
     line-height: 3;
 }
+
 
 
 
