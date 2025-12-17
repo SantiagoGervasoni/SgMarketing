@@ -35,23 +35,19 @@ setInterval(() => {
 
 
 function mostrarSeccion(id) {
-    // Ocultar todas las secciones
-    const secciones = document.querySelectorAll('section');
-    secciones.forEach(sec => sec.style.display = 'none');
-
-    // Mostrar solo la sección seleccionada
-    const seccionSeleccionada = document.getElementById(id);
-    if (seccionSeleccionada) seccionSeleccionada.style.display = 'block';
-
-    // Opcional: ocultar el hero si no es inicio
-    const hero = document.querySelector('.hero');
-    if(hero) hero.style.display = (id === 'inicio') ? 'flex' : 'none';
+    const seccion = document.getElementById(id);
+    if (seccion) {
+        seccion.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
 }
-
     
 
 
     
+
 
 
 
