@@ -593,49 +593,53 @@ body.pagina-servicio {
 }
 
 /* ==========================
-   OPTIMIZACIÓN SOLO MOBILE
+   FIX DEFINITIVO MOBILE
 ========================== */
 @media (max-width: 768px) {
 
-    .carrusel {
+    .hero {
         width: 100%;
         max-width: 100%;
-        height: 220px;       /* altura ideal en celular */
+        padding-left: 0;
+        padding-right: 0;
+        align-items: stretch;
+    }
+
+    .carrusel {
+        width: 100vw;
+        max-width: 100vw;
+        height: 240px;
         margin: 20px auto;
-        border-radius: 0;   /* ocupa todo el ancho */
+        border-radius: 0;
+        overflow: hidden;
     }
 
     .carrusel .slides {
+        width: 100%;
         height: 100%;
+        display: block;
     }
 
     .carrusel .slide {
         width: 100%;
         height: 100%;
-        object-fit: cover;  /* llena bien sin deformar */
         display: none;
+        object-fit: cover;
     }
 
     .carrusel .slide.activo {
         display: block;
     }
 
-    /* Flechas más visibles en mobile */
     .carrusel button.prev,
     .carrusel button.next {
         font-size: 20px;
         padding: 8px 12px;
         background: rgba(0,0,0,0.6);
     }
-
-    .carrusel button.prev {
-        left: 8px;
-    }
-
-    .carrusel button.next {
-        right: 8px;
-    }
 }
+
+
 
 
 
