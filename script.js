@@ -1,5 +1,4 @@
-// fecha en footer
-document.getElementById('anio').innerText = new Date().getFullYear();
+
 
 // scroll suave para botones del menú
 function scrollToSection(id){
@@ -53,6 +52,7 @@ function mostrarSeccion(id) {
 
 
     
+
 
 
 
